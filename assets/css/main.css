@@ -1,0 +1,404 @@
+.header {
+    height: 120px;
+    background-image: linear-gradient(180deg, var(--primary-color), #91faee);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 5px 0 0 0;
+}
+
+.header__navbar-item {
+    margin: 0 8px;
+    position: relative;
+}
+
+/* Lớp giả để giải quyết vấn đề 1
+    Có vấn đề mới đó là có khoảng cách giữa thẻ item và qrcode, nên phải xây cầu (2)
+*/
+.header__navbar-item--has-qr:hover .header__qrcode {
+    display: block;
+}
+
+.header__navbar-item--has-notification:hover .header__notification {
+    display: block;
+}
+
+.header__navbar-item, .header__navbar-item-link {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+/* 
+    * Xuất hiện gạch chân dưới icon 
+    * Đăng ký, đăng nhập bị lệch hàng
+*/
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-icon-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__navbar-icon-link {
+    text-decoration: none;
+}
+
+.header__navbar-list {
+    display: flex;
+    align-items: center;
+}
+
+.header__navbar-item:hover, 
+.header__navbar-item-link:hover, 
+.header__navbar-icon-link:hover {
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.header__navbar-item--strong {
+    font-weight: 400;
+}
+
+.header__navbar-item--separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background-color: var(--black-color);
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__navbar-icon-link {
+    color: var(--black-color);
+}
+
+.header__navbar-icon {
+    font-size: 1.8rem;
+    margin: 0 4px;
+}
+
+.header__navbar-title--no-pointer {
+    cursor: text;
+    color: var(--black-color);
+}
+
+/* Header QR Code*/
+.header__qrcode {
+    width: 180px;
+    padding: 2px;
+    background-color: var(--white-color); 
+    position: absolute;
+    left: 0;
+    top: 120%;
+    border-radius: 2px;
+    /* Cần phải viết lớp giả, lúc nào rê chuột vào mới hiện ra (1)*/
+    display: none;
+    animation: fadeIn ease-in 0.3s;
+}
+
+.header__qrcode::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    left: 0;
+    top: -5px;
+}
+
+.header__qrcode-img {
+    width: 100%;
+}
+
+.header__qrcode-app {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__qrcode-download-img {
+    height: 16px;
+}
+
+.header__qrcode-download-img:nth-child(1) {
+    margin-left: 10px;
+}
+
+.header__qrcode-download-img:nth-child(2) {
+    margin-right: 10px;
+}
+
+/* Header notification */
+
+.header__notification {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    width: 400px;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    transform-origin: top right;
+    animation: headerNotificationGrowth ease-in 0.25s;
+    /* Mục đích đó là tối ưu chuyển động trình duyệt */
+    will-change: opacity, transform;
+    display: none;
+}
+
+@keyframes headerNotificationGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__notification-header {
+    height: 40px;
+    background-color: var(--white-color);
+    cursor: default;
+    border-radius: 2px;
+}
+
+.header__notification-header h3 {
+    color: var(--black-color);
+    margin: 0 0 0 12px;
+    font-size: 1.5rem;
+    /*  Mục đích là để dòng chữ "Thông báo mới nhận" căn giữa dòng, không cần phải dùng flex
+        line-height = chiều cao thẻ chứa nó
+    */
+    line-height: 40px;
+}
+
+.header__notification-list {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.header__notification-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Tin tức nào đọc rồi sẽ có màu hồng */
+.header__notification-item--viewed {
+    background-color: rgb(58, 197, 201, 0.1);
+}
+
+.header__notification-link {
+    display: flex;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.header__notification-img {
+    width: 48px;
+}
+
+.header__notification-info {
+    margin-left: 10px;
+}
+
+.header__notification-name {
+    display: block;
+    color: var(--black-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.header__notification-description {
+    display: block;
+    font-size: 1.2rem;
+    color: #545454;
+    margin-top: 5px;
+}
+
+.header__notification-footer {
+    display: flex;
+}
+
+.header__notification-footer-btn {
+    /*  margin auto ở đây để căn giữa "Xem tất cả"
+        chúng ta có thể sử dụng text-align: center
+        -> bug, không hoạt động đúng ý muốn
+        https://www.youtube.com/watch?v=q-L7slRcrp0&list=PL_-VfJajZj0U9nEXa4qyfB4U5ZIYCMPlz&index=48 3:05
+        nên phải đổi sang display: flex
+    */
+    margin: auto;
+    text-decoration: none;
+    padding: 10px 48px;
+    color: var(--black-color);
+    font-weight: 500;
+}
+
+/*  Làm auth form container */
+.auth-form {
+    background-color: var(--white-color);
+    border-radius: 5px;
+    width: 500px;
+    overflow: hidden;
+/*  Chỗ này xử lý rất hay.
+    Ta bo góc cho thằng cha. Thằng này có bg màu trắng.
+    Thằng con là thằng social đáng lẽ cũng được bo. Nhưng mà do thằng HTML hơi ngu
+    nên thằng con với bg khác hiện ra, che luôn cả chỗ bo của thằng cha.
+*/
+}
+
+.auth-form__container {
+    padding: 0 32px;
+}
+
+.auth-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-form__heading {
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.auth-form__switch-btn {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.auth-form__input {
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    border: 1px solid var(--boder-color);
+    border-radius: 2px;
+    /*  Khi click vào ô input, thấy viền ô xuất hiện. Để loại bỏ nó, sử dung outline
+        Ở thị trường VN rất ít dùng outline, ở nước ngoài thường dùng cho người kiếm thị.
+     */
+    outline: none;
+}
+
+/*  Nhấp vào ô input, thấy con chuột nhấp nháy, đó là focus */
+.auth-form__input:focus {
+    border-color: #888;
+}
+
+.auth-form__description {
+    margin-top: 20px;
+}
+
+.auth-form__policy {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.auth-form__policy-link {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.auth-form__controls {
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__controls-back {
+    margin-right: 8px;
+}
+
+.auth-form__socials {
+    background-color: #f5f5f5;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.auth-form__socials-icon {
+    font-size: 1.8rem;
+}
+
+.auth-form__socials--facebook {
+    background-color: #3A5A98;
+    color: var(--white-color);
+}
+
+.auth-form__socials-title {
+    margin: 0 24px;
+}
+
+.auth-form__socials--google {
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+
+.auth-form__help {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__help-link {
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.auth-form__help-separate {
+    display: block;
+    border-left: 1px solid #000000;
+    height: 16px;
+    margin: 0 12px;
+}
+
+.auth-form__help-forget {
+    color: var(--primary-color);
+}
+
+/*  Header search */
+.header-with-search {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    width: 200px;
+    margin-left: 6px;
+}
+
+.header__logo-img {
+    width: 150px;
+}
+
+.header__search {
+    height: 50px;
+    background-color: var(--white-color);
+    flex: 1;
+    border-radius: 3px;
+}
+
+.header__cart {
+    width: 150px;
+    text-align: center;
+}
+
+.header__cart-icon {
+    color: var(--black-color);
+    font-size: 2.4rem;
+}
+
