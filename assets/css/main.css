@@ -66,7 +66,7 @@
 }
 
 .header__navbar-item--strong {
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .header__navbar-item--separate::after {
@@ -104,11 +104,12 @@
     left: 0;
     top: 120%;
     border-radius: 2px;
-    /* Cần phải viết lớp giả, lúc nào rê chuột vào mới hiện ra (1)*/
+    /* Cần phải viết lớp giả, lúc nào rê chuột vào mới hiện ra (1) */
     display: none;
     animation: fadeIn ease-in 0.3s;
+    z-index: 1;
 }
-
+/*  Giải quyết vấn đề (2) */
 .header__qrcode::before {
     content: "";
     display: block;
@@ -154,6 +155,18 @@
     /* Mục đích đó là tối ưu chuyển động trình duyệt */
     will-change: opacity, transform;
     display: none;
+    z-index: 1;
+}
+
+/*  Làm cầu cho header notification */
+.header__notification:before {
+    display: block;
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    left: 0;
+    top: -8px;
 }
 
 @keyframes headerNotificationGrowth {
@@ -368,37 +381,3 @@
 .auth-form__help-forget {
     color: var(--primary-color);
 }
-
-/*  Header search */
-.header-with-search {
-    height: 80px;
-    display: flex;
-    align-items: center;
-}
-
-.header__logo {
-    width: 200px;
-    margin-left: 6px;
-}
-
-.header__logo-img {
-    width: 150px;
-}
-
-.header__search {
-    height: 50px;
-    background-color: var(--white-color);
-    flex: 1;
-    border-radius: 3px;
-}
-
-.header__cart {
-    width: 150px;
-    text-align: center;
-}
-
-.header__cart-icon {
-    color: var(--black-color);
-    font-size: 2.4rem;
-}
-

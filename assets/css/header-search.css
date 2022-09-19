@@ -1,0 +1,367 @@
+.header-with-search {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin: 0 8px;
+}
+
+.header__logo {
+    width: 200px;
+}
+
+.header__logo-img {
+    width: 150px;
+    height: 40px;
+    border-radius: 3px;
+}
+
+.header__search {
+    height: 40px;
+    background-color: var(--white-color);
+    flex: 1;
+    border-radius: 3px;
+    /*  Do thằng header__search-input ghi đè làm mất border-radius
+        Nhưng nếu overflow: hidden -> thằng con của thằng này, hay bảng lịch sử
+        tìm kiếm sẽ không được hiện ra => border-radius trực tiếp cho thằng con
+    */
+    /*overflow: hidden;*/
+    display: flex;
+    align-items: center;
+}
+
+.header__search-input {
+    /*  Ban đầu ở đây là width: 100%
+        Để cho thằng "trong shop" và "mũi tên" cùng 1 hàng
+        Đơn giản là cho thằng header__search-input flex = 1
+        Nó sẽ k chiếm chỗ của 2 thằng kia
+    */
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    padding: 0 8px;
+    border-radius: 3px;
+}
+
+/*  https://www.w3schools.com/cssref/css_selectors.asp */
+.header__search-input:focus ~ .header__search-history {
+    display: block;
+}
+
+.header__search-select {
+    border-left: 1px solid var(--black-color);
+    padding-left: 16px;
+    position: relative;
+}
+
+.header__search-select:hover {
+    cursor: pointer;
+}
+
+.header__search-select:hover .header__search-option {
+    /*  Cần làm cầu (3) */
+    display: block;
+}
+
+.header__search-select-label {
+    font-size: 1.4rem;
+}
+
+.header__search-select-icon {
+    font-size: 1.4rem;
+    margin: 0 16px;
+    /*    Chỗ này nghĩ mãi k ra, icon hơi lệch */
+    position: relative;
+    right: 4px;
+}
+
+.header__search-btn {
+    border: none;
+    background-color: var(--primary-color);
+    padding: 0;
+    height: 34px;
+    width: 48px;
+    border-radius: 3px;
+    margin-right: 3px;
+}
+
+.header__search-btn:hover {
+    cursor: pointer;
+    background-color: #74e9ec
+}
+
+.header__search-btn-icon {
+    font-size: 1.4rem;
+    /*margin-right: 16px;*/
+}
+
+.header__search-option {
+    position: absolute;
+    right: 0;
+    top: 140%;
+    list-style: none;
+    width: 135px;
+    background-color: var(--white-color);
+    border-radius: 3px;
+    padding-left: 0;
+    /*    Thêm bóng */
+    box-shadow: 0 0 3px #ccc;
+    /*overflow: hidden;*/
+    display: none;
+}
+
+.header__search-option:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top: -18px;
+    left: 0;
+}
+
+.header__search-option-item {
+    padding: 8px 0;
+}
+
+.header__search-option-item:hover {
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: #fafafa;
+}
+
+.header__search-option-item span {
+    font-size: 1.4rem;
+    margin-left: 18px;
+}
+
+.header__search-option-item i {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin: 0 6px 0 12px;
+    display: none;
+}
+
+.header__search-option-item--active i {
+    display: inline-block;
+}
+
+.header__search-input-wrap {
+    flex: 1;
+    position: relative;
+}
+
+.header__search-history {
+    position: absolute;
+    left: 0;
+    top: 196%;
+    width: 100%;
+    background-color: var(--white-color);
+    padding-left: 0;
+    border-radius: 3px;
+    box-shadow: 0 0 3px #ccc;
+    display: none;
+}
+
+.header__search-history-h3 {
+    font-size: 1.4rem;
+    margin-left: 8px;
+    color: #999;
+    cursor: default;
+}
+
+.header__search-history-list {
+    padding-left: 0;
+    list-style: none;
+    margin: 10px 0 0;
+}
+
+.header__search-history-item {
+    height: 38px;
+    padding: 0 8px;
+}
+
+/*  Tại sao không bỏ overflow ở thằng cha (158)
+    Bởi vì lát nữa cần xây cầu
+*/
+.header__search-history-item:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.header__search-history-item:hover {
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+.header__search-history-item a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--black-color);
+/*    Căn giữa chữ theo chiều dọc, khỏi phải dùng flex phức tạp */
+    line-height: 38px;
+}
+
+.header__cart {
+    width: 150px;
+    text-align: center;
+}
+
+.header__cart-notice {
+    position: absolute;
+    top: -11px;
+    right: -8px;
+    font-size: 1.4rem;
+    background-color: var(--primary-color);
+    color: var(--black-color);
+    padding: 2px 8px;
+    border-radius: 10px;
+    line-height: 1.4rem;
+}
+
+.header__cart-wrap {
+    position: relative;
+    cursor: pointer;
+/*    Phá thuộc tính block -> wrap sẽ mất thuộc tính kế thừa chiều rộng từ cha */
+    display: inline-block;
+/*    Thêm 1 ít padding cho dễ ấn */
+    padding: 0 10px;
+}
+.header__cart-wrap:hover .header__cart-list{
+    display: block;
+}
+
+/* Làm cầu cho cart */
+.header__cart-list:before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -20px;
+    width: 100%;
+    height: 20px;
+}
+
+.header__cart-icon {
+    color: var(--black-color);
+    font-size: 2.4rem;
+}
+
+.header__cart-list {
+    position: absolute;
+    width: 400px;
+    right: 10px;
+    top: 150%;
+    background-color: var(--white-color);
+    border-radius: 3px;
+    box-shadow: 0 0 3px #ccc;
+    display: block;
+    animation: fadeIn ease-in 0.3s;
+    cursor: default;
+}
+
+.header__cart--no-item .header__cart--no-item-h3,
+.header__cart--no-item .header__cart--no-item-img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+.header__cart--no-item-h3 {
+    font-size: 1.6rem;
+    margin: 0 0 24px;
+    display: none;
+}
+
+.header__cart--no-item-img {
+    width: 60%;
+    display: none;
+}
+
+.header__cart-heading {
+    text-align: left;
+    margin-left: 12px;
+    font-size: 1.4rem;
+}
+
+.header__cart-list-item {
+    list-style: none;
+    padding-left: 0;
+}
+
+.header__cart-item {
+    display: flex;
+    /*justify-content: space-between;*/
+    margin-bottom: 10px;
+}
+
+.header__cart-item:hover {
+    background-color: #f8f8f8;
+    /*background-color: #ff253a;*/
+}
+
+.header__cart-item-img {
+    height: 60px;
+    width: 70px;
+    margin-left: 4px;
+}
+
+.header__cart-item-info {
+    width: 100%;
+}
+
+.header__cart-item-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 12px;
+    line-height: 0.8rem;
+}
+
+.header__cart-item-name {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.header__cart-item-price {
+    font-size: 1.4rem;
+}
+
+.header__cart-item-mul{
+    font-size: 1rem;
+}
+
+.header__cart-item-quantity {
+    font-size: 1.4rem;
+}
+
+.header__cart-item-body {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 12px;
+}
+
+.header__cart-item-description {
+    font-size: 1.4rem;
+}
+.header__cart-item-delete {
+    font-size: 1.4rem;
+}
+
+.header__cart-item-delete:hover {
+    color: var(--primary-color);
+}
+
+.header__cart-view {
+    float: right;
+    margin: 12px;
+}
+
+.header__cart-view:hover {
+    background-color: #4cd3d7;
+}
+
+
+
