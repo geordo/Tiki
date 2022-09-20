@@ -7,10 +7,11 @@
 
 .header__logo {
     width: 200px;
+    margin-top: 3px;
 }
 
 .header__logo-img {
-    width: 150px;
+    width: 140px;
     height: 40px;
     border-radius: 3px;
 }
@@ -107,7 +108,7 @@
     padding-left: 0;
     /*    Thêm bóng */
     box-shadow: 0 0 3px #ccc;
-    /*overflow: hidden;*/
+    /* overflow: hidden; */
     display: none;
 }
 
@@ -256,7 +257,7 @@
     background-color: var(--white-color);
     border-radius: 3px;
     box-shadow: 0 0 3px #ccc;
-    display: block;
+    display: none;
     animation: fadeIn ease-in 0.3s;
     cursor: default;
 }
@@ -362,6 +363,3 @@
 .header__cart-view:hover {
     background-color: #4cd3d7;
 }
-
-
-

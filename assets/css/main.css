@@ -4,8 +4,79 @@
 }
 
 .header__navbar {
+    height: 50px;
     display: flex;
     justify-content: space-between;
+}
+
+.header__navbar-user {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header__navbar-user:hover .header__navbar-user-list {
+    display: block;
+}
+
+.header__navbar-user-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.header__navbar-user-name {
+    font-size: 1.4rem;
+    margin-left: 4px;
+}
+
+.header__navbar-user-list {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 140px;
+    background-color: var(--white-color);
+    list-style: none;
+    border-radius: 3px;
+    z-index: 1;
+    display: none;
+    box-shadow: 0 0 3px #ccc;
+    padding: 0;
+    animation: fadeIn ease-in 0.3s;
+}
+
+.header__navbar-user-list:before {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
+
+.header__navbar-user-item {
+    font-size: 1.4rem;
+    padding-left: 0;
+    padding: 10px 0 0 20px;
+    cursor: pointer;
+}
+
+.header__navbar-user-item:hover {
+    background-color: #fafafa;
+}
+
+.header__navbar-user-item:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding-top: 10px;
+}
+
+.header__navbar-user-item:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding-bottom: 10px;
+    color: var(--primary-color);
 }
 
 .header__navbar-list {
@@ -199,7 +270,7 @@
 
 .header__notification-list {
     padding-left: 0;
-    list-style-type: none;
+    list-style: none;
 }
 
 .header__notification-item:hover {
