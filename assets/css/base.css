@@ -1,5 +1,6 @@
 :root {
     --primary-color: #3ac5c9;
+    /* --primary-color: #d0011b; */
     --white-color: #fff;
     --black-color: #000;
     --boder-color: #dbdbdb;
@@ -31,6 +32,20 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.grid__col-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+
+.grid__col-10 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.3333%;
 }
 
 /* Animation */
@@ -94,10 +109,10 @@ html {
     height: 36px;
     text-decoration: none;
     border: none;
-    border-radius: 2px;
+    border-radius: 3px;
     font-size: 1.4rem;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     padding: 0 8px;

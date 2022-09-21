@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/header-search.css">
+    <link rel="stylesheet" href="./assets/css/app__container.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
     <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
   </head>
@@ -18,8 +19,8 @@
         <div class="grid">
           <nav class="header__navbar">
             <ul class="header__navbar-list">
-              <li class="header__navbar-item header__navbar-item--separate">Kênh người bán</li>
-              <li class="header__navbar-item header__navbar-item--separate">Trở thành Người bán</li>
+              <li class="header__navbar-item header__navbar-item--separate">Kênh người thuê</li>
+              <li class="header__navbar-item header__navbar-item--separate">Trở thành Người cho thuê</li>
               <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
                 Tải ứng dụng
     <!--            Header QR Code-->
@@ -218,9 +219,58 @@
           </div>
         </div>
       </header>
-      <div class="container">
+      <div class="app__container">
+        <div class="grid">
+          <div class="grid__row app__content">
+            <div class="grid__col-2">
+              <div class="category">
+                <h3 class="category__heading">
+                  <i class="category__heading-icon fa-solid fa-list-ul"></i>
+                  Danh mục
+                </h3>
+                <ul class="category__list">
+                  <li class="category__item category__item--active">Sản phẩm</li>
+                  <li class="category__item">Phòng đơn</li>
+                  <li class="category__item">Nhà nguyên căn</li>
+                  <li class="category__item">Homestay</li>
+                </ul>
+              </div>
+            </div>
+            <div class="grid__col-10">
+              <div class="home-filter">
+                <span class="home-filter__label">Sắp xếp theo</span>
+                <button class="home-filter__btn btn">Phổ biến</button>
+                <button class="home-filter__btn btn btn--primary">Mới nhất</button>
+                <button class="home-filter__btn btn">Nổi bật</button>
+                <div class="price-select">
+                  <span class="price-select__label">Giá</span>
+                  <i class="price-select__icon fa-solid fa-chevron-down"></i>
+                  <ul class="price-select__list">
+                    <li class="price-select__item">Giá: Từ thấp đến cao</li>
+                    <li class="price-select__item">Giá: Từ cao xuống thấp</li>
+                  </ul>
+                </div>
+                <div class="home-filter__page">
+                  <div class="home-filter__page-num">
+                    <span class="home-filter__page-current">1</span>/14
+                  </div>
+                  <div class="home-filter__page-control">
+                    <a href="" class="home-filter__page-control--btn home-filter__page-control--diasble">
+                      <i class="home-filter__page-control--icon fa-solid fa-chevron-left"></i>
+                    </a>
+                    <a href="" class="home-filter__page-control--btn">
+                      <i class="home-filter__page-control--icon fa-solid fa-chevron-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <footer class="footer"></footer>
+      <footer class="footer">
+      </footer>
     </div>
 <!--    Modal layout-->
 <!--    <div class="modal">-->

@@ -46,7 +46,7 @@
     animation: fadeIn ease-in 0.3s;
 }
 
-.header__navbar-user-list:before {
+.header__navbar-user-list::before {
     content: "";
     display: block;
     width: 64px;
@@ -237,7 +237,7 @@
 }
 
 /*  Làm cầu cho header notification */
-.header__notification:before {
+.header__notification::before {
     display: block;
     content: "";
     position: absolute;
