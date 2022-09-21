@@ -1,10 +1,10 @@
 .header {
-    height: 120px;
+    height: 112px;
     background-image: linear-gradient(180deg, var(--primary-color), #91faee);
 }
 
 .header__navbar {
-    height: 50px;
+    height: 36px;
     display: flex;
     justify-content: space-between;
 }
@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    margin-left: 10px;
 }
 
 .header__navbar-user:hover .header__navbar-user-list {
@@ -57,6 +58,7 @@
 
 .header__navbar-user-item {
     font-size: 1.4rem;
+    font-weight: 500;
     padding-left: 0;
     padding: 10px 0 0 20px;
     cursor: pointer;
@@ -122,6 +124,11 @@
 
 .header__navbar-icon-link {
     text-decoration: none;
+}
+
+.header__navbar-icon-link:nth-child(2) {
+    margin-left: 4px;
+    /* display: none; */
 }
 
 .header__navbar-list {

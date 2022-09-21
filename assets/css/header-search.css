@@ -6,15 +6,29 @@
 }
 
 .header__logo {
-    width: 200px;
-    margin-top: 3px;
+    margin: 0 50px 0 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .header__logo-img {
-    width: 140px;
-    height: 40px;
-    border-radius: 3px;
+    width: 36px;
+    height: 36px;
+    border: 10px solid #000000;
+    border-top-color: #ff0051;
+    border-radius: 50%;
 }
+
+.header__logo-name {
+    color: #000000;
+    margin-left: 8px;
+}
+
+.header__logo-link {
+    text-decoration: none;
+}
+
 
 .header__search {
     height: 40px;
