@@ -221,6 +221,7 @@
 .header__cart {
     width: 150px;
     text-align: center;
+    z-index: 1;
 }
 
 .header__cart-notice {
