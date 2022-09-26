@@ -1,6 +1,7 @@
 .header {
     height: 112px;
-    background-image: linear-gradient(180deg, var(--primary-color), #91faee);
+    /* background-image: linear-gradient(180deg, var(--primary-color), #91faee); */
+    background-color: var(--primary-color);
 }
 
 .header__navbar {
@@ -29,6 +30,7 @@
 .header__navbar-user-name {
     font-size: 1.4rem;
     margin-left: 4px;
+    color: var(--white-color);
 }
 
 .header__navbar-user-list {
@@ -39,11 +41,11 @@
     background-color: var(--white-color);
     list-style: none;
     border-radius: 3px;
-    z-index: 1;
     display: none;
     box-shadow: 0 0 3px #ccc;
     padding: 0;
     animation: fadeIn ease-in 0.3s;
+    z-index: 2;
 }
 
 .header__navbar-user-list::before {
@@ -57,9 +59,9 @@
 }
 
 .header__navbar-user-item {
+    color: var(--black-color);
     font-size: 1.4rem;
     font-weight: 500;
-    padding-left: 0;
     padding: 10px 0 0 20px;
     cursor: pointer;
 }
@@ -107,7 +109,7 @@
     display: inline-block;
     font-size: 1.4rem;
     font-weight: 400;
-    color: var(--black-color);
+    color: var(--white-color);
     text-decoration: none;
 }
 
@@ -153,14 +155,14 @@
     position: absolute;
     width: 2px;
     height: 12px;
-    background-color: var(--black-color);
+    background-color: var(--white-color);
     right: -9px;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .header__navbar-icon-link {
-    color: var(--black-color);
+    color: var(--white-color);
 }
 
 .header__navbar-icon {
@@ -170,13 +172,13 @@
 
 .header__navbar-title--no-pointer {
     cursor: text;
-    color: var(--black-color);
+    color: var(--white-color);
 }
 
 /* Header QR Code*/
 .header__qrcode {
     width: 180px;
-    padding: 2px;
+    padding: 2px 2px 18px;
     background-color: var(--white-color); 
     position: absolute;
     left: 0;
@@ -185,8 +187,10 @@
     /* Cần phải viết lớp giả, lúc nào rê chuột vào mới hiện ra (1) */
     display: none;
     animation: fadeIn ease-in 0.3s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
+
 /*  Giải quyết vấn đề (2) */
 .header__qrcode::before {
     content: "";
@@ -233,7 +237,8 @@
     /* Mục đích đó là tối ưu chuyển động trình duyệt */
     will-change: opacity, transform;
     display: none;
-    z-index: 1;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    z-index: 2;
 }
 
 /*  Làm cầu cho header notification */

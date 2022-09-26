@@ -115,7 +115,7 @@
     position: absolute;
     left: 0;
     bottom: -4px;
-    border-top: 4px solid #3ac5c9;
+    border-top: 4px solid var(--primary-color);
     border-left: 3px solid transparent;
     /* Làm tối màu */
     filter: brightness(60%);

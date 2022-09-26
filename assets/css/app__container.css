@@ -32,6 +32,7 @@
     margin-left: 40px;
     margin-top: 6px;
     font-size: 1.4rem;
+    font-weight: 500;
     cursor: pointer;
     /* Làm chuyển động */
     position: relative;
@@ -88,6 +89,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    z-index: 1;
 }
 
 .price-select:hover .price-select__list {
