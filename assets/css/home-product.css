@@ -6,7 +6,7 @@
     background-color: var(--white-color);
     border-radius: 3px;
     position: relative;
-    box-shadow: 0 1px 2px 0 rbga(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
     transition: transform ease-in 0.1s;
     will-change: transform;
     display: block;
@@ -155,5 +155,6 @@
 }
 
 .home-product-item__sale-off-label {
+    color: var(--black-color);
     font-weight: 500;
 }
