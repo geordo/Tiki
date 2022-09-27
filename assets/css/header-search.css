@@ -43,6 +43,7 @@
     /*overflow: hidden;*/
     display: flex;
     align-items: center;
+    z-index: 2;
 }
 
 .header__search-input {
@@ -166,6 +167,8 @@
 .header__search-input-wrap {
     flex: 1;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .header__search-history {
@@ -246,6 +249,7 @@
 /*    Thêm 1 ít padding cho dễ ấn */
     padding: 0 10px;
 }
+
 .header__cart-wrap:hover .header__cart-list{
     display: block;
 }
@@ -286,7 +290,6 @@
     display: block;
 }
 
-
 .header__cart--no-item-h3 {
     font-size: 1.6rem;
     margin: 0 0 24px;
@@ -307,6 +310,8 @@
 .header__cart-list-item {
     list-style: none;
     padding-left: 0;
+    height: 36vh;
+    overflow-y: auto;
 }
 
 .header__cart-item {
@@ -335,19 +340,30 @@
     align-items: center;
     justify-content: space-between;
     margin-right: 12px;
-    line-height: 0.8rem;
+    margin-top: 2px;
+    /*line-height: 0.8rem;*/
 }
 
 .header__cart-item-name {
+    margin: 0;
+    padding-right: 16px;
     font-size: 1.4rem;
     font-weight: 500;
+    line-height: 2rem;
+    max-height: 4rem;
+    overflow: hidden;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-align: left;
 }
 
 .header__cart-item-price {
     font-size: 1.4rem;
 }
 
-.header__cart-item-mul{
+.header__cart-item-mul {
     font-size: 1rem;
 }
 
@@ -364,6 +380,7 @@
 .header__cart-item-description {
     font-size: 1.4rem;
 }
+
 .header__cart-item-delete {
     font-size: 1.4rem;
 }

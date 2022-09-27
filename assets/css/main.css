@@ -238,7 +238,7 @@
     will-change: opacity, transform;
     display: none;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    z-index: 2;
+    z-index: 3;
 }
 
 /*  Làm cầu cho header notification */
