@@ -1,6 +1,4 @@
 :root {
-    /* --primary-color: #3ac5c9; */
-    /* --primary-color: #d0011b; */
     --primary-color: #D0011B;
     --white-color: #FFFFFF;
     --black-color: #000000;
@@ -38,7 +36,7 @@ html {
 }
 
 .grid__col-2 {
-    /*padding-left: 5px;*/
+    padding-left: 5px;
     padding-right: 5px;
     width: 16.6667%;
 }
@@ -52,61 +50,6 @@ html {
     padding-left: 5px;
     padding-right: 5px;
     width: 83.3333%;
-}
-
-/* Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/*  Animation này khi ta hover vào đăng ký, đăng nhập, nó sẽ to dần form đăng ký lên */
-@keyframes growth {
-    from {
-        transform: scale(var(--growth-from));
-    }
-    to {
-        transform: scale(var(--growth-to));
-    }
-}
-/*  Modal */
-.modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    animation: fadeIn linear 0.1s;
-    z-index: 1000;
-}
-
-.modal__overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-/*  Body của modal được căn giữa
-    .modal display: flex
-    margin: auto
-
-    Do overlay và body cùng cấp. Để body nổi lên trên thì ta dùng Z-Index = 1;
-
-    Chưa cần phải set kích thước, lúc nào có nội dung nó tự động set.
-*/
-.modal__body {
-    --growth-from: 0.7;
-    --growth-to: 1;
-    margin: auto;
-    position: relative;
-    z-index: 1;
-    animation: growth linear 0.1s;
 }
 
 /*  button style */

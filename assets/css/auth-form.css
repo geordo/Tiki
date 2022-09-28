@@ -1,0 +1,120 @@
+.auth-form {
+    background-color: var(--white-color);
+    border-radius: 5px;
+    width: 500px;
+    overflow: hidden;
+}
+
+.auth-form__container {
+    padding: 0 32px;
+}
+
+.auth-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-form__heading {
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.auth-form__switch-btn {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.auth-form__input {
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    border: 1px solid var(--boder-color);
+    border-radius: 2px;
+    /*  Khi click vào ô input, thấy viền ô xuất hiện. Để loại bỏ nó, sử dung outline
+        Ở thị trường VN rất ít dùng outline, ở nước ngoài thường dùng cho người kiếm thị.
+     */
+    outline: none;
+}
+
+/*  Nhấp vào ô input, thấy con chuột nhấp nháy, đó là focus */
+.auth-form__input:focus {
+    border-color: #888;
+}
+
+.auth-form__description {
+    margin-top: 20px;
+}
+
+.auth-form__policy {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.auth-form__policy-link {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.auth-form__controls {
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__controls-back {
+    margin-right: 8px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form__socials {
+    background-color: #f5f5f5;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.auth-form__socials-icon {
+    font-size: 1.8rem;
+}
+
+.auth-form__socials--facebook {
+    background-color: #3A5A98;
+    color: var(--white-color);
+}
+
+.auth-form__socials-title {
+    margin: 0 24px;
+}
+
+.auth-form__socials--google {
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+
+.auth-form__help {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__help-link {
+    color: var(--black-color);
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.auth-form__help-separate {
+    display: block;
+    border-left: 1px solid #000000;
+    height: 16px;
+    margin: 0 12px;
+}
+
+.auth-form__help-forget {
+    color: var(--primary-color);
+}

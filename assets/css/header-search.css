@@ -321,8 +321,7 @@
 }
 
 .header__cart-item:hover {
-    background-color: #f8f8f8;
-    /*background-color: #ff253a;*/
+    background-color: #F8F8F8;
 }
 
 .header__cart-item-img {
