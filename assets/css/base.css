@@ -229,15 +229,17 @@ html {
 
 .footer__list-payment {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .footer__list-payment-item {
-    margin-right: 20px;
+    /*flex: 1 0 21%;*/
+    padding-right: 20px;
 }
 
 .footer__list-payment-item-img {
-    width: 70px;
-    height: 40px;
+    width: 86px;
+    height: 50px;
     border-radius: 3px;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
@@ -253,6 +255,7 @@ html {
 }
 
 .download-wrap {
+    width: 240px;
     display: flex;
 }
 
@@ -264,67 +267,29 @@ html {
 .footer__download-app {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-left: 16px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 12px;
 }
 
 .footer__download-app-img {
-    height: 24px;
-    margin-bottom: 8px;
+    width: 122px;
+    height: 32px;
+    margin: 4px 0;
 }
 
-.footer__policy {
-    background-color: #F5F5F5;
-    height: 200px;
-    mar-top: 30px;
-}
+/*.footer__policy-link {*/
+/*    display: block;*/
+/*    text-align: left;*/
+/*}*/
 
-.footer__policy-list-wrap {
-    padding-top: 48px;
-    text-align: center;
-}
-
-.footer__policy-list {
-    list-style: none;
-    /*margin-top: 20px;*/
-    padding-left: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.footer__policy-item {
-    font-size: 1.8rem;
-    margin-right: 20px;
-}
-
-.footer__policy-link {
-    text-decoration: none;
-    color: var(--black-color);
-}
-
-.footer__policy-link:hover {
-    color: var(--primary-color);
+.footer__policy-img-wrap {
+    margin-left: -14px;
 }
 
 .footer__policy-img {
-    height: 60px;
+    height: 48px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
