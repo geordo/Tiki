@@ -89,6 +89,10 @@
     margin: 5px 0 0 0;
 }
 
+.header__navbar-item:first-child {
+    margin-left: 0;
+}
+
 .header__navbar-item {
     margin: 0 8px;
     position: relative;
