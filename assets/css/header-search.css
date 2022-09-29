@@ -1,8 +1,8 @@
 .header-with-search {
     height: 80px;
+    margin: 0 8px;
     display: flex;
     align-items: center;
-    margin: 0 8px;
 }
 
 .header__logo {
@@ -10,15 +10,6 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-}
-
-.header__logo-img {
-    width: 36px;
-    height: 36px;
-    border: 10px solid #000000;
-    /* border-top-color: #ff0051; */
-    border-top-color: var(--white-color);
-    border-radius: 50%;
 }
 
 .header__logo-name {
@@ -30,18 +21,12 @@
     text-decoration: none;
 }
 
-
 .header__search {
     height: 40px;
     background-color: var(--white-color);
-    flex: 1;
     border-radius: 3px;
-    /*  Do thằng header__search-input ghi đè làm mất border-radius
-        Nhưng nếu overflow: hidden -> thằng con của thằng này, hay bảng lịch sử
-        tìm kiếm sẽ không được hiện ra => border-radius trực tiếp cho thằng con
-    */
-    /*overflow: hidden;*/
     display: flex;
+    flex: 1;
     align-items: center;
     z-index: 2;
 }
@@ -61,6 +46,13 @@
     border-radius: 3px;
 }
 
+.header__search-input-wrap {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    position: relative;
+}
+
 /*  https://www.w3schools.com/cssref/css_selectors.asp */
 .header__search-input:focus ~ .header__search-history {
     display: block;
@@ -77,7 +69,6 @@
 }
 
 .header__search-select:hover .header__search-option {
-    /*  Cần làm cầu (3) */
     display: block;
 }
 
@@ -88,19 +79,18 @@
 .header__search-select-icon {
     font-size: 1.4rem;
     margin: 0 16px;
-    /*    Chỗ này nghĩ mãi k ra, icon hơi lệch */
     position: relative;
     right: 4px;
 }
 
 .header__search-btn {
-    border: none;
-    background-color: var(--primary-color);
-    padding: 0;
-    height: 34px;
     width: 48px;
-    border-radius: 3px;
+    height: 34px;
     margin-right: 3px;
+    padding: 0;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 3px;
 }
 
 .header__search-btn:hover {
@@ -109,21 +99,18 @@
 
 .header__search-btn-icon {
     font-size: 1.4rem;
-    /*margin-right: 16px;*/
 }
 
 .header__search-option {
+    width: 135px;
+    padding-left: 0;
     position: absolute;
     right: 0;
     top: 140%;
     list-style: none;
-    width: 135px;
     background-color: var(--white-color);
     border-radius: 3px;
-    padding-left: 0;
-    /*    Thêm bóng */
     box-shadow: 0 0 3px #ccc;
-    /* overflow: hidden; */
     display: none;
     z-index: 2;
 }
@@ -131,9 +118,9 @@
 .header__search-option:before {
     content: "";
     display: block;
-    position: absolute;
     width: 100%;
     height: 20px;
+    position: absolute;
     top: -18px;
     left: 0;
 }
@@ -145,7 +132,7 @@
 .header__search-option-item:hover {
     cursor: pointer;
     border-radius: 3px;
-    background-color: #fafafa;
+    background-color: #FAFAFA;
 }
 
 .header__search-option-item span {
@@ -162,13 +149,6 @@
 
 .header__search-option-item--active i {
     display: inline-block;
-}
-
-.header__search-input-wrap {
-    flex: 1;
-    position: relative;
-    display: flex;
-    align-items: center;
 }
 
 .header__search-history {
@@ -202,9 +182,6 @@
     padding: 0 8px;
 }
 
-/*  Tại sao không bỏ overflow ở thằng cha (158)
-    Bởi vì lát nữa cần xây cầu
-*/
 .header__search-history-item:last-child {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -219,50 +196,50 @@
     text-decoration: none;
     font-size: 1.4rem;
     color: var(--black-color);
-/*    Căn giữa chữ theo chiều dọc, khỏi phải dùng flex phức tạp */
     line-height: 38px;
 }
 
+/* Header cart */
 .header__cart {
     width: 150px;
     text-align: center;
     z-index: 1;
 }
 
-.header__cart-notice {
-    position: absolute;
-    top: -11px;
-    right: -8px;
-    font-size: 1.4rem;
-    background-color: var(--white-color);
-    color: var(--black-color);
-    padding: 2px 8px;
-    border-radius: 10px;
-    line-height: 1.4rem;
-}
-
 .header__cart-wrap {
     position: relative;
     cursor: pointer;
-/*    Phá thuộc tính block -> wrap sẽ mất thuộc tính kế thừa chiều rộng từ cha */
+    /*  Why did I use "display: inline-block"? 
+        Because: This will break property from father class.
+    */
     display: inline-block;
-/*    Thêm 1 ít padding cho dễ ấn */
     padding: 0 10px;
+}
+
+.header__cart-notice {
+    padding: 2px 8px;
+    font-size: 1.4rem;
+    color: var(--black-color);
+    background-color: var(--white-color);
+    border-radius: 10px;
+    line-height: 1.4rem;
+    position: absolute;
+    top: -11px;
+    right: -8px;
 }
 
 .header__cart-wrap:hover .header__cart-list{
     display: block;
 }
 
-/* Làm cầu cho cart */
-.header__cart-list:before {
-    display: block;
+.header__cart-list::before {
     content: "";
+    width: 100%;
+    height: 20px;
+    display: block;
     position: absolute;
     left: 0;
     top: -20px;
-    width: 100%;
-    height: 20px;
 }
 
 .header__cart-icon {
@@ -271,14 +248,14 @@
 }
 
 .header__cart-list {
-    position: absolute;
     width: 400px;
-    right: 10px;
-    top: 150%;
-    background-color: var(--white-color);
     border-radius: 3px;
-    box-shadow: 0 0 3px #ccc;
+    background-color: var(--white-color);
+    position: absolute;
+    top: 150%;
+    right: 10px;
     display: none;
+    box-shadow: 0 0 3px #ccc;
     animation: fadeIn ease-in 0.3s;
     cursor: default;
 }
@@ -316,7 +293,6 @@
 
 .header__cart-item {
     display: flex;
-    /*justify-content: space-between;*/
     margin-bottom: 10px;
 }
 
