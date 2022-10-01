@@ -9,6 +9,7 @@
     justify-content: space-between;
 }
 
+
 .header__navbar-list {
     display: flex;
     align-items: center;
@@ -38,6 +39,10 @@
 
 .header__navbar-item:first-child {
     margin-left: 0;
+}
+
+.header__navbar-item:last-child {
+    margin-right: 0;
 }
 
 .header__navbar-icon {
@@ -201,8 +206,8 @@
 }
 
 .header__notification-img {
-    width: 52px;
-    height: 52px;
+    width: 60px;
+    height: 60px;
     padding-left: 10px;
 }
 

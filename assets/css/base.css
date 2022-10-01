@@ -41,15 +41,15 @@ html {
     width: 16.6667%;
 }
 
-.grid__col-2-4 {
-    padding: 0 5px;
-    width: 20%;
-}
-
 .grid__col-10 {
     padding-left: 5px;
     padding-right: 5px;
     width: 83.3333%;
+}
+
+.grid__col-2-4 {
+    padding: 0 5px;
+    width: 20%;
 }
 
 /*  button style */
@@ -98,7 +98,8 @@ html {
 
 /*  Pagination */
 .pagination {
-    padding: 50px 0 30px;
+    padding: 40px 0;
+    margin: 0;
     list-style: none;
     display: flex;
     align-items: center;
@@ -120,18 +121,14 @@ html {
 }
 
 .pagination-item__link {
-    display: block;
-    text-decoration: none;
-    color: var(--black-color);
     min-width: 40px;
     height: 30px;
     line-height: 30px;
     border-radius: 3px;
+    display: block;
+    text-decoration: none;
+    color: var(--black-color);
     text-align: center;
-}
-
-.pagination-item__icon {
-    /*font-size: 1.2rem;*/
 }
 
 /* Footer */
@@ -145,18 +142,18 @@ html {
 }
 
 .footer__heading {
-    font-size: 1.6rem;
     margin-top: 48px;
+    font-size: 1.6rem;
 }
 
 .footer__list {
-    list-style: none;
     padding-left: 0;
+    list-style: none;
 }
 
 .footer__list-item {
-    font-size: 1.4rem;
     margin-top: 6px;
+    font-size: 1.4rem;
 }
 
 .footer__list-item:hover .footer__list-item-link {
@@ -176,26 +173,8 @@ html {
 }
 
 .footer__list-payment-item {
-    /*flex: 1 0 21%;*/
     padding-right: 20px;
-}
-
-.footer__list-payment-item-img {
-    width: 86px;
-    height: 50px;
-    border-radius: 3px;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-}
-
-#visa {
-    padding: 10px;
-}
-
-.footer__list-item-icon {
-    font-size: 1.8rem;
-    color: #737373;
-    margin-right: 8px;
-}
+} 
 
 .download-wrap {
     width: 240px;
@@ -208,11 +187,11 @@ html {
 }
 
 .footer__download-app {
+    margin-left: 12px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-left: 12px;
 }
 
 .footer__download-app-img {
@@ -221,11 +200,6 @@ html {
     margin: 4px 0;
 }
 
-/*.footer__policy-link {*/
-/*    display: block;*/
-/*    text-align: left;*/
-/*}*/
-
 .footer__policy-img-wrap {
     margin-left: -14px;
 }
@@ -233,14 +207,3 @@ html {
 .footer__policy-img {
     height: 48px;
 }
-
-
-
-
-
-
-
-
-
-
-

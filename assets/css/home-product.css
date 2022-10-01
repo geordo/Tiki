@@ -71,14 +71,9 @@
     color: var(--primary-color);
 }
 
-.home-product-item__rating-heart-icon {
-}
-
 .home-product-item__rating-star {
     color: #D5D5D5;
 }
-
-.home-product-item__rating-star-icon {}
 
 .home-product-item__rating-star-icon--gold {
     color: var(--star-color);

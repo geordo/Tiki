@@ -106,7 +106,7 @@
     padding-left: 0;
     position: absolute;
     right: 0;
-    top: 140%;
+    top: 137%;
     list-style: none;
     background-color: var(--white-color);
     border-radius: 3px;
@@ -115,7 +115,7 @@
     z-index: 2;
 }
 
-.header__search-option:before {
+.header__search-option::before {
     content: "";
     display: block;
     width: 100%;
