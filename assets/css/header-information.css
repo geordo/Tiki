@@ -144,7 +144,7 @@
     border-radius: 2px;
     position: absolute;
     top: 120%;
-    right: 0;
+    right: -2px;
     transform-origin: top right;
     /* Web animation optimization */
     will-change: opacity, transform;
