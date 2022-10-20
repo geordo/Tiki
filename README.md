@@ -1,5 +1,5 @@
 # SPACES
 ## 0x00: Overview 
-My ecommerce website written HTML, CSS, Javascript. 
+My e-commerce website is written in HTML, CSS, and Javascript.
 
 ![](/assets/images/README-IMG.png)
