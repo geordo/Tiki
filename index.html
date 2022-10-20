@@ -5,17 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPACES.</title>
-    <link rel="stylesheet" href="./assets/css/normalize.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/header-search.css">
-    <link rel="stylesheet" href="./assets/css/header-information.css">
-    <link rel="stylesheet" href="./assets/css/app__container.css">
-    <link rel="stylesheet" href="./assets/css/home-product.css">
-    <link rel="stylesheet" href="./assets/css/animation.css">
-    <link rel="stylesheet" href="./assets/css/auth-form.css">
-    <link rel="stylesheet" href="./assets/css/modal.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
     <link rel="shortcut icon" href="./assets/images/fav.ico" type="image/x-icon">
   </head>
@@ -725,99 +715,100 @@
 <!--      <div class="modal__overlay"></div>-->
 <!--      <div class="modal__body">-->
 <!--&lt;!&ndash;          Authen form&ndash;&gt;-->
-<!--&lt;!&ndash;        <div class="auth-form">&ndash;&gt;-->
-<!--&lt;!&ndash;          <div class="auth-form__container">&ndash;&gt;-->
-<!--&lt;!&ndash;            <div class="auth-form__header">&ndash;&gt;-->
-<!--&lt;!&ndash;              <h3 class="auth-form__heading">Sign Up</h3>&ndash;&gt;-->
-<!--&lt;!&ndash;              <span class="auth-form__switch-btn">Sign In</span>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--        <div class="auth-form">-->
+<!--          <div class="auth-form__container">-->
+<!--            <div class="auth-form__header">-->
+<!--              <h3 class="auth-form__heading">Sign Up</h3>-->
+<!--              <span class="auth-form__switch-btn">Sign In</span>-->
+<!--            </div>-->
 
-<!--&lt;!&ndash;            <div class="auth-form__form">&ndash;&gt;-->
-<!--&lt;!&ndash;              <div class="auth-form__group">&ndash;&gt;-->
-<!--&lt;!&ndash;                <input type="text" class="auth-form__input" placeholder="Email">&ndash;&gt;-->
-<!--&lt;!&ndash;              </div>&ndash;&gt;-->
-<!--&lt;!&ndash;              <div class="auth-form__group">&ndash;&gt;-->
-<!--&lt;!&ndash;                <input type="password" class="auth-form__input" placeholder="Password">&ndash;&gt;-->
-<!--&lt;!&ndash;              </div>&ndash;&gt;-->
-<!--&lt;!&ndash;              <div class="auth-form__group">&ndash;&gt;-->
-<!--&lt;!&ndash;                <input type="password" class="auth-form__input" placeholder="Confirm password">&ndash;&gt;-->
-<!--&lt;!&ndash;              </div>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--            <div class="auth-form__form">-->
+<!--              <div class="auth-form__group">-->
+<!--                <input type="text" class="auth-form__input" placeholder="Email">-->
+<!--              </div>-->
+<!--              <div class="auth-form__group">-->
+<!--                <input type="password" class="auth-form__input" placeholder="Password">-->
+<!--              </div>-->
+<!--              <div class="auth-form__group">-->
+<!--                <input type="password" class="auth-form__input" placeholder="Confirm password">-->
+<!--              </div>-->
+<!--            </div>-->
 
-<!--&lt;!&ndash;            <div class="auth-form__description">&ndash;&gt;-->
-<!--&lt;!&ndash;              <p class="auth-form__policy">By signing up, you agree to Space's&ndash;&gt;-->
-<!--&lt;!&ndash;                <a href="" class="auth-form__policy-link">Term of service</a> &&ndash;&gt;-->
-<!--&lt;!&ndash;                <a href="" class="auth-form__policy-link">privacy policy</a>&ndash;&gt;-->
-<!--&lt;!&ndash;              </p>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--            <div class="auth-form__description">-->
+<!--              <p class="auth-form__policy">By signing up, you agree to Space's-->
+<!--                <a href="" class="auth-form__policy-link">Term of service</a> &-->
+<!--                <a href="" class="auth-form__policy-link">privacy policy</a>-->
+<!--              </p>-->
+<!--            </div>-->
 
-<!--&lt;!&ndash;            <div class="auth-form__controls">&ndash;&gt;-->
-<!--&lt;!&ndash;              <button class="btn btn&#45;&#45;normal auth-form__controls-back">BACK</button>&ndash;&gt;-->
-<!--&lt;!&ndash;              <button class="btn btn&#45;&#45;primary">REGISTER</button>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--            <div class="auth-form__controls">-->
+<!--              <button class="btn btn&#45;&#45;normal auth-form__controls-back">BACK</button>-->
+<!--              <button class="btn btn&#45;&#45;primary">REGISTER</button>-->
+<!--            </div>-->
+<!--          </div>-->
 
-<!--&lt;!&ndash;          <div class="auth-form__socials">&ndash;&gt;-->
-<!--&lt;!&ndash;            <a href="" class="auth-form__socials&#45;&#45;facebook btn btn&#45;&#45;size-s btn&#45;&#45;with-icon">&ndash;&gt;-->
-<!--&lt;!&ndash;              <i class="auth-form__socials-icon fa-brands fa-square-facebook"></i>&ndash;&gt;-->
-<!--&lt;!&ndash;              <span class="auth-form__socials-title">&ndash;&gt;-->
-<!--&lt;!&ndash;                Connect with Facebook&ndash;&gt;-->
-<!--&lt;!&ndash;              </span>&ndash;&gt;-->
-<!--&lt;!&ndash;            </a>&ndash;&gt;-->
-<!--&lt;!&ndash;            <a href="" class="auth-form__socials&#45;&#45;google btn btn&#45;&#45;size-s btn&#45;&#45;with-icon">&ndash;&gt;-->
-<!--&lt;!&ndash;              <i class="auth-form__socials-icon fa-brands fa-google"></i>&ndash;&gt;-->
-<!--&lt;!&ndash;              <span class="auth-form__socials-title">&ndash;&gt;-->
-<!--&lt;!&ndash;                Connect with Google&ndash;&gt;-->
-<!--&lt;!&ndash;              </span>&ndash;&gt;-->
-<!--&lt;!&ndash;            </a>&ndash;&gt;-->
-<!--&lt;!&ndash;          </div>&ndash;&gt;-->
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
-<!--&lt;!&ndash;        Login form &ndash;&gt;-->
-<!--&lt;!&ndash;        <div class="auth-form">&ndash;&gt;-->
-<!--&lt;!&ndash;          <div class="auth-form__container">&ndash;&gt;-->
-<!--&lt;!&ndash;            <div class="auth-form__header">&ndash;&gt;-->
-<!--&lt;!&ndash;              <h3 class="auth-form__heading">Sign In</h3>&ndash;&gt;-->
-<!--&lt;!&ndash;              <span class="auth-form__switch-btn">Sign Up</span>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--          <div class="auth-form__socials">-->
+<!--            <a href="" class="auth-form__socials&#45;&#45;facebook btn btn&#45;&#45;size-s btn&#45;&#45;with-icon">-->
+<!--              <i class="auth-form__socials-icon fa-brands fa-square-facebook"></i>-->
+<!--              <span class="auth-form__socials-title">-->
+<!--                Connect with Facebook-->
+<!--              </span>-->
+<!--            </a>-->
 
-<!--&lt;!&ndash;            <div class="auth-form__form">&ndash;&gt;-->
-<!--&lt;!&ndash;              <div class="auth-form__group">&ndash;&gt;-->
-<!--&lt;!&ndash;                <input type="text" class="auth-form__input" placeholder="Username">&ndash;&gt;-->
-<!--&lt;!&ndash;              </div>&ndash;&gt;-->
-<!--&lt;!&ndash;              <div class="auth-form__group">&ndash;&gt;-->
-<!--&lt;!&ndash;                <input type="password" class="auth-form__input" placeholder="Password">&ndash;&gt;-->
-<!--&lt;!&ndash;              </div>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--            <a href="" class="auth-form__socials&#45;&#45;google btn btn&#45;&#45;size-s btn&#45;&#45;with-icon">-->
+<!--              <i class="auth-form__socials-icon fa-brands fa-google"></i>-->
+<!--              <span class="auth-form__socials-title">-->
+<!--                Connect with Google-->
+<!--              </span>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; Login form &ndash;&gt;-->
+<!--         <div class="auth-form">-->
+<!--          <div class="auth-form__container">-->
+<!--            <div class="auth-form__header">-->
+<!--              <h3 class="auth-form__heading">Sign In</h3>-->
+<!--              <span class="auth-form__switch-btn">Sign Up</span>-->
+<!--            </div>-->
 
-<!--&lt;!&ndash;            <div class="auth-form__description">&ndash;&gt;-->
-<!--&lt;!&ndash;              <div class="auth-form__help">&ndash;&gt;-->
-<!--&lt;!&ndash;                <a href="" class="auth-form__help-link auth-form__help-forget">Forgot password</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                <span class="auth-form__help-separate"></span>&ndash;&gt;-->
-<!--&lt;!&ndash;                <a href="" class="auth-form__help-link">Get help?</a>&ndash;&gt;-->
-<!--&lt;!&ndash;              </div>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--            <div class="auth-form__form">-->
+<!--              <div class="auth-form__group">-->
+<!--                <input type="text" class="auth-form__input" placeholder="Username">-->
+<!--              </div>-->
+<!--              <div class="auth-form__group">-->
+<!--                <input type="password" class="auth-form__input" placeholder="Password">-->
+<!--              </div>-->
+<!--            </div>-->
 
-<!--&lt;!&ndash;            <div class="auth-form__controls">&ndash;&gt;-->
-<!--&lt;!&ndash;              <button class="btn btn&#45;&#45;normal auth-form__controls-back">BACK</button>&ndash;&gt;-->
-<!--&lt;!&ndash;              <button class="btn btn&#45;&#45;primary">SIGN In</button>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--            <div class="auth-form__description">-->
+<!--              <div class="auth-form__help">-->
+<!--                <a href="" class="auth-form__help-link auth-form__help-forget">Forgot password</a>-->
+<!--                <span class="auth-form__help-separate"></span>-->
+<!--                <a href="" class="auth-form__help-link">Get help?</a>-->
+<!--              </div>-->
+<!--            </div>-->
 
-<!--&lt;!&ndash;          <div class="auth-form__socials">&ndash;&gt;-->
-<!--&lt;!&ndash;            <a href="" class="auth-form__socials&#45;&#45;facebook btn btn&#45;&#45;size-s btn&#45;&#45;with-icon">&ndash;&gt;-->
-<!--&lt;!&ndash;              <i class="auth-form__socials-icon fa-brands fa-square-facebook"></i>&ndash;&gt;-->
-<!--&lt;!&ndash;              <span class="auth-form__socials-title">&ndash;&gt;-->
-<!--&lt;!&ndash;                Connect with Facebook&ndash;&gt;-->
-<!--&lt;!&ndash;              </span>&ndash;&gt;-->
-<!--&lt;!&ndash;            </a>&ndash;&gt;-->
-<!--&lt;!&ndash;            <a href="" class="auth-form__socials&#45;&#45;google btn btn&#45;&#45;size-s btn&#45;&#45;with-icon">&ndash;&gt;-->
-<!--&lt;!&ndash;              <i class="auth-form__socials-icon fa-brands fa-google"></i>&ndash;&gt;-->
-<!--&lt;!&ndash;              <span class="auth-form__socials-title">&ndash;&gt;-->
-<!--&lt;!&ndash;                Connet with Google&ndash;&gt;-->
-<!--&lt;!&ndash;              </span>&ndash;&gt;-->
-<!--&lt;!&ndash;            </a>&ndash;&gt;-->
-<!--&lt;!&ndash;          </div>&ndash;&gt;-->
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--            <div class="auth-form__controls">-->
+<!--              <button class="btn btn&#45;&#45;normal auth-form__controls-back">BACK</button>-->
+<!--              <button class="btn btn&#45;&#45;primary">SIGN IN</button>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="auth-form__socials">-->
+<!--            <a href="" class="auth-form__socials&#45;&#45;facebook btn btn&#45;&#45;size-s btn&#45;&#45;with-icon">-->
+<!--              <i class="auth-form__socials-icon fa-brands fa-square-facebook"></i>-->
+<!--              <span class="auth-form__socials-title">-->
+<!--                Connect with Facebook-->
+<!--              </span>-->
+<!--            </a>-->
+<!--            <a href="" class="auth-form__socials&#45;&#45;google btn btn&#45;&#45;size-s btn&#45;&#45;with-icon">-->
+<!--              <i class="auth-form__socials-icon fa-brands fa-google"></i>-->
+<!--              <span class="auth-form__socials-title">-->
+<!--                Connect with Google-->
+<!--              </span>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
 <!--      </div>-->
 <!--    </div>-->
   </body>

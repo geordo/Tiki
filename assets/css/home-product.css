@@ -25,6 +25,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 .home-product-item__name {
@@ -121,6 +123,7 @@
 
 .home-product-item__fav-icon {
     margin-left: 4px;
+    margin-top: 2px;
 }
 
 .home-product-item__fav-description {
@@ -151,6 +154,7 @@
 .home-product-item__sale-off-per {
     color: var(--black-color);
     font-weight: 600;
+    margin-top: 3px;
 }
 
 .home-product-item__sale-off-label {
